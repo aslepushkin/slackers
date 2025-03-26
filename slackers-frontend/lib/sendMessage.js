@@ -14,9 +14,9 @@ var ses = new AWS.SES();
 
 module.exports = function(message, author, callback){
     ses.sendEmail({
-        Source: 'kleptons@gmail.com',
+        Source: '********',
         Destination: {
-            ToAddresses: ['alexander@slepushkin.com']
+            ToAddresses: ['********']
         },
         Message: {
             Body: {
