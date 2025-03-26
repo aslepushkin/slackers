@@ -28,12 +28,12 @@
   "grabberTimeoutMin": 2,
   "grabberTimeoutMax": 4,
   "urls": {
-    "deputiesList": "http://w1.c1.rada.gov.ua/pls/site2/fetch_mps?skl_id=9",
-    "deputatPage": "http://itd.rada.gov.ua/mps/info/page/{d_id}",
-    "deputatSessionPrint": "http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_dep_reg_w_list_print?startDate={startDate}&endDate={endDate}&kod={kod}",
-    "deputatSessionFull": "http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_dep_reg_w_list?startDate={startDate}&endDate={endDate}&nom_str=0&kod={kod}",
-    "deputatSearchByName": "http://w1.c1.rada.gov.ua/pls/site2/fetch_mps?skl_id=9&dep_keyword={keyword}",
-    "sessionFull": "http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_reg_write?g_id={urlId}"
+    "deputiesList": "********",
+    "deputatPage": "********",
+    "deputatSessionPrint": "********",
+    "deputatSessionFull": "********",
+    "deputatSearchByName": "********",
+    "sessionFull": "********"
   },
   "logger": {
     "file": "error.log",

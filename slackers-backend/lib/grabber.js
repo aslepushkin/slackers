@@ -37,7 +37,6 @@ var getPage = function(url, charset, callback){
             .set('Connection', 'keep-alive')
             .set('DNT', '1')
             .set('User-Agent', getUserAgent())
-            //.set('Host', 'w1.c1.rada.gov.ua')
             .end(function (err, res) {
                 if (callback) callback(err, res);
             });
@@ -49,12 +48,11 @@ var getImage = function(url, callback){
         agent
             .get(url)
             .accept('image/png,image/*;q=0.8,*/*;q=0.5')
-            //.charset('windows-1251')
             .set('Accept-Encoding', 'gzip, deflate')
             .set('Accept-Language', 'uk,en;q=0.7,en-US;q=0.3')
             .set('Connection', 'keep-alive')
             .set('User-Agent', getUserAgent())
-            .set('Referer', 'http://w1.c1.rada.gov.ua/pls/site2/p_deputat_list')
+            .set('Referer', '********')
             .end(function (err, res) {
                 if (callback) callback(err, res);
             });
