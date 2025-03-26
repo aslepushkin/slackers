@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta property="og:site_name" content="Загулы и запои"/>
+    <meta property="og:title" content="Загулы и запои"/>
+    <meta property="og:description" content="По состоянию на сегодня в желтой майке лидера по загулам - <%= cache[1].name.surname %>."/>
+    <meta property="og:url" content="http://slackers.elasticbeanstalk.com"/>
+    <meta property="og:image" content="<%=settings.photos%><%= cache[1].photo %>" />
+    <title>Помогаем бороться с запоями и загулами</title>
+    <meta name="Description" content="Помогаем депутатам Верховной Рады Украины бороться с запоями и загулами">
+    <meta name="Keywords" content="депутат верховна рада прогул прогульщик посещение тунеядцы дармоеды работа трудовая дисциплина рабочее место голосование">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/javascripts/jquery.blockUI.js"></script>
+
+    <script>
+        var photoPath = "<%=settings.photos%>";
+    </script>
+    <script src="/javascripts/min.js"></script>
+</head>
+<body>
+
+<div class="modal fade" id="messWin" tabindex="-1" role="dialog" aria-labelledby="messWinLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="messWinLabel">Письмо</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <textarea id="messBody" class="form-control" rows="5" maxlength="500" placeholder="500 символов максимум"></textarea>
+                    <input id="messNick" type="text" class="form-control" maxlength="32" style="margin-top: 8px;" placeholder="С уваженьем, чмоки-чмоки, вечно ваш Аноним">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Передумать</button>
+                <button type="button" id="messSendBtn" disabled class="btn btn-primary">Отправить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header>
+    <img class="logo" src="images/logo.png">
+    <div class="actions">
+        <!--<a href="#">Поставьте себе на сайт информер</a>-->
+        <p><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fslackers.elasticbeanstalk.com" target="_blank">Расскажите о нас в фейсбуке</a></p>
+        <p><a href="#"  data-toggle="modal" data-target="#messWin">Напишите нам хорошее, доброе письмо</a></p>
+        <p class="copy">&copy; Группа граждан</p>
+    </div>
+</header>
+
+<div id="headerContainer">
+    <p>Прогуляно:</p>
+</div>
+
+<ul id="slackersContainer">
+    <% for(var i=0; i<20; i++) {%>
+    <% if(cache[i].kod === 371 ) {%>
+
+    <li class="deputat inactive">
+        <img src="<%=settings.photos%><%= cache[i].photo %>"/>
+        <div class="fio"><%= cache[i].name.surname %> <%= cache[i].name.firstname %> <%= cache[i].name.patronymic %> (<a href="http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_dep?vid=3&kod=<%=cache[i].kod%>" target="_blank">Пруфлинк</a>)</div>
+        <div class="faction"><%= cache[i].faction.title %></div>
+        <div class="percents"><%= cache[i].stats.percents %><span>&nbsp;% (<%= cache[i].stats.nonregistered %> из <%= cache[i].stats.all %>)</span></div>
+
+    </li>
+
+    <%} else {%>
+
+    <li class="deputat">
+        <img src="<%=settings.photos%><%= cache[i].photo %>"/>
+        <div class="fio"><%= cache[i].name.surname %> <%= cache[i].name.firstname %> <%= cache[i].name.patronymic %> (<a href="http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_dep?vid=3&kod=<%=cache[i].kod%>" target="_blank">Пруфлинк</a>)</div>
+        <div class="faction"><%= cache[i].faction.title %></div>
+        <div class="percents"><%= cache[i].stats.percents %><span>&nbsp;% (<%= cache[i].stats.nonregistered %> из <%= cache[i].stats.all %>)</span></div>
+
+    </li>
+    <%}%>
+    <%}%>
+</ul>
+
+<script src="javascripts/ga.js"></script>
+
+</body>
+</html>

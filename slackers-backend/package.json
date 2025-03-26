@@ -1,0 +1,31 @@
+{
+  "name": "slackers-backend",
+  "description": "Grabbing and parsing open data on rada.gov.ua",
+  "version": "0.0.0",
+  "private": true,
+  "main": "worker.js",
+  "scripts": {
+    "start": "node ./worker.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/aslepushkin/slackers-parser.git"
+  },
+  "author": "alexander@slepushkin.com",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/aslepushkin/slackers-parser#readme",
+  "dependencies": {
+    "async": "^1.5.0",
+    "aws-sdk": "^2.2.15",
+    "jsdom": "^7.0.2",
+    "mongoose": "^4.2.4",
+    "nconf": "^0.8.2",
+    "superagent": "^1.4.0",
+    "superagent-charset": "^0.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "should": "^7.1.0"
+  }
+}

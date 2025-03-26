@@ -1,0 +1,16 @@
+{
+  "aws" : {
+    "region": "us-west-1",
+    "bucket": "slackers.elasticbeanstalk.com",
+    "user": "slacker",
+    "accessKeyId": "********",
+    "secretAccessKey": "********",
+    "httpEndPoint": "http://slackers.elasticbeanstalk.com.s3-website-us-west-1.amazonaws.com",
+    "paths": {
+      "photos": "photos/"
+    },
+    "files": {
+      "cache": "cache.json"
+    }
+  }
+}

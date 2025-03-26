@@ -1,0 +1,83 @@
+body,html {
+    padding: 0; margin: 0;
+}
+body * {
+    font-family: arial, sans-serif;
+}
+
+h2 {
+    padding: 20px 0 20px 2%;
+}
+
+header {
+    color: #99979B;
+    padding: 20px 0 20px 2%;
+    font-weight: bold;
+    width: 98%;
+    background-color: #ddd;
+}
+
+footer {
+    color: #99979B;
+    padding: 20px 2% 20px 2%;
+    width: 96%;
+    background-color: #ddd;
+}
+
+.copy {
+    margin-top:10px;
+}
+
+
+
+#slackersContainer {
+    width: 96%;
+    clear: both;
+    padding-left: 2%;
+    margin-bottom: 70px;
+    list-style-type: none;
+}
+
+.deputat {
+    clear: both;
+    margin-bottom: 40px;
+}
+
+.inactive * {
+    color: #eee !important;
+}
+
+.inactive IMG {
+    opacity:0.1;
+    -moz-opacity:0.1;
+    filter: alpha(opacity=10) black;
+    -khtml-opacity: 0.1;
+}
+
+.deputat IMG {
+    width: 100px;
+    float: left;
+    margin: 0 7px 7px 0;
+}
+
+#slackersContainer .percents {
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.fio {
+    font-size: 1.2em;
+}
+
+.fio a {
+    font-size: 1em;
+}
+
+#slackersContainer .faction {
+    font-size: 8pt;
+    margin-top: 5px;
+    color: #777777;
+}
+
+

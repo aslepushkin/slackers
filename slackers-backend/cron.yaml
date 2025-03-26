@@ -1,0 +1,5 @@
+version: 1
+cron: 
+  - name: "start"
+    url: "/start"
+    schedule: "15 1 * * 2,3,4,5"
